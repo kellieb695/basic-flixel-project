@@ -8,14 +8,22 @@ class PlayState extends FlxState
 {
 
 	var hero:Hero;
-	var screensaverHero:ScreensaverHero;
+	var screensaverHero1:ScreensaverHero;
+	var screensaverHero2:ScreensaverHero;
+	var screensaverHero3:ScreensaverHero;
 	override public function create()
 	{	
 		hero = new Hero(300,300);
 		add(hero);
 
-		screensaverHero = new ScreensaverHero(50,50);
-		add(screensaverHero);
+		screensaverHero1 = new ScreensaverHero(50,50);
+		screensaverHero2 = new ScreensaverHero(100,100);
+		screensaverHero3 = new ScreensaverHero(400,400);
+		add(screensaverHero1);
+		add(screensaverHero2);
+		add(screensaverHero3);
+
+
 
 		var text = new FlxText(260,220,200, "hellooo world!!",20);
 		text.font = "Book Antiqua";
