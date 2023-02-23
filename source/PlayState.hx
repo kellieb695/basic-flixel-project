@@ -8,32 +8,34 @@ import flixel.FlxG;
 class PlayState extends FlxState
 {
 
-	var hero:Hero;
 	var screensaverHero1:ScreensaverHero;
 	var screensaverHero2:ScreensaverHero;
 	var screensaverHero3:ScreensaverHero;
+	var screensaverHero4:ScreensaverHero;
 	var controllableHero:ControllableHero;
-	
+
 	override public function create()
 	{	
-		hero = new Hero(300,300);
-		add(hero);
 
-		controllableHero = new ControllableHero(300,450);
+		controllableHero = new ControllableHero(500, 400);
 		add(controllableHero);
 
-		screensaverHero1 = new ScreensaverHero(50,50);
-		screensaverHero2 = new ScreensaverHero(100,100);
-		screensaverHero3 = new ScreensaverHero(400,400);
-		screensaverHero1.velocity.x = FlxG.random.float(-50,50);
-		screensaverHero1.velocity.y = FlxG.random.float(-50,50);
-		screensaverHero2.velocity.x = FlxG.random.float(-50,50);
-		screensaverHero2.velocity.y = FlxG.random.float(-50,50);
-		screensaverHero3.velocity.x = FlxG.random.float(-50,50);
-		screensaverHero3.velocity.y = FlxG.random.float(-50,50);
+		screensaverHero1 = new ScreensaverHero(50, 0);
+		screensaverHero2 = new ScreensaverHero(50, 75);
+		screensaverHero3 = new ScreensaverHero(50, 150);
+		screensaverHero4 = new ScreensaverHero(50, 325);
+		screensaverHero1.velocity.x = FlxG.random.float(-75,75);
+		screensaverHero1.velocity.y = FlxG.random.float(-75,75);
+		screensaverHero2.velocity.x = FlxG.random.float(-75,75);
+		screensaverHero2.velocity.y = FlxG.random.float(-75,75);
+		screensaverHero3.velocity.x = FlxG.random.float(-75,75);
+		screensaverHero3.velocity.y = FlxG.random.float(-75,75);
+		screensaverHero4.velocity.x = FlxG.random.float(-75,75);
+		screensaverHero4.velocity.y = FlxG.random.float(-75,75);
 		add(screensaverHero1);
 		add(screensaverHero2);
 		add(screensaverHero3);
+		add(screensaverHero4);
 
 
 

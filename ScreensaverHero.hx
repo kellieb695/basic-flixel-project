@@ -8,12 +8,17 @@ package;
         
         public function new(x:Int = 0, y:Int = 0){
             super(x,y);
-            super.makeGraphic(30, 40);
+            super.makeGraphic(30, 30);
         
         }
 
 
         override public function update(elapsed:Float){
+            
+            if (FlxG.keys.justPressed.SPACE){
+                this.velocity.x *= -1;
+                this.velocity.y *= -1;
+                }
             
             if (this.x <= (FlxG.width/2) && this.y <= (FlxG.height/2)){
                 this.color = 0xFF1500FF;
