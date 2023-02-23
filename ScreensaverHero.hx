@@ -12,18 +12,22 @@ package;
         
         }
 
-        var hue:Float = 0;
-        
 
         override public function update(elapsed:Float){
             
+            if (this.x <= (FlxG.width/2) && this.y <= (FlxG.height/2)){
+                this.color = 0xFF1500FF;
+            }
+            else if (this.x > (FlxG.width/2) && this.y <= (FlxG.height/2)){
+                this.color = 0xFFFFFB00;
+            }
+            else if (this.x <= (FlxG.width/2) && this.y > (FlxG.height/2)){
+                this.color = 0xFF16B900;
+            }
+            else if (this.x > (FlxG.width/2) && this.y > (FlxG.height/2)){
+                this.color = 0xFFFF0000;
+            }
             
-            hue += this.x;
-            
-            if (hue > 360)
-                    hue -= 360;
-            var color = FlxColor.fromHSB(Std.int(hue), 1, 1);
-            this.color = color;
 
             if (this.x >= FlxG.width - (this.width/2)){
                 this.x = 0;
