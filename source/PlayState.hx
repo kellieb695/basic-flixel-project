@@ -20,12 +20,12 @@ class PlayState extends FlxState
 		screensaverHero1 = new ScreensaverHero(50,50);
 		screensaverHero2 = new ScreensaverHero(100,100);
 		screensaverHero3 = new ScreensaverHero(400,400);
-		screensaverHero1.velocity.x = FlxG.random.float(25,75);
-		screensaverHero1.velocity.y = FlxG.random.float(25,75);
-		screensaverHero2.velocity.x = FlxG.random.float(25,75);
-		screensaverHero2.velocity.y = FlxG.random.float(25,75);
-		screensaverHero3.velocity.x = FlxG.random.float(25,75);
-		screensaverHero3.velocity.y = FlxG.random.float(25,75);
+		screensaverHero1.velocity.x = FlxG.random.float(-50,50);
+		screensaverHero1.velocity.y = FlxG.random.float(-50,50);
+		screensaverHero2.velocity.x = FlxG.random.float(-50,50);
+		screensaverHero2.velocity.y = FlxG.random.float(-50,50);
+		screensaverHero3.velocity.x = FlxG.random.float(-50,50);
+		screensaverHero3.velocity.y = FlxG.random.float(-50,50);
 		add(screensaverHero1);
 		add(screensaverHero2);
 		add(screensaverHero3);

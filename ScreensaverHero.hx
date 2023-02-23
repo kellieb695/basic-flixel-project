@@ -29,20 +29,18 @@ package;
             }
             
 
-            if (this.x >= FlxG.width - (this.width/2)){
-                this.x = 0;
+            if (this.velocity.x > 0 && this.x >= FlxG.width - this.width){
+                this.x = 0;   
             }
             else if (this.velocity.x < 0 && this.x <= 0){
-                this.x = 0;
-                this.velocity.x *= -1;
+                this.x = FlxG.width; 
             }
 
-            if (this.y >= FlxG.height - (this.height/2)){
-                this.y = 0;
+            if (this.velocity.y > 0 && this.y >= FlxG.height - this.height){
+                this.y = 0; 
             }
             else if (this.velocity.y < 0 && this.y <= 0){
-                this.y = 0;
-                this.velocity.y *= -1;
+                this.y = FlxG.height;
             }
             
 
