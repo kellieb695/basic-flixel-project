@@ -12,10 +12,15 @@ class PlayState extends FlxState
 	var screensaverHero1:ScreensaverHero;
 	var screensaverHero2:ScreensaverHero;
 	var screensaverHero3:ScreensaverHero;
+	var controllableHero:ControllableHero;
+	
 	override public function create()
 	{	
 		hero = new Hero(300,300);
 		add(hero);
+
+		controllableHero = new ControllableHero(300,450);
+		add(controllableHero);
 
 		screensaverHero1 = new ScreensaverHero(50,50);
 		screensaverHero2 = new ScreensaverHero(100,100);
