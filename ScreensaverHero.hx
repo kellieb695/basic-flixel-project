@@ -23,7 +23,7 @@ package;
             this.velocity.y = FlxG.random.float(min_speed, max_speed);
         }
 
-        public function screenWrap(){
+        private function screenWrap(){
             if (this.velocity.x > 0 && this.x >= FlxG.width){
                 this.x = -(this.width);   
             }
@@ -39,7 +39,7 @@ package;
             }
         }
 
-        public function changeColor(){
+        private function changeColor(){
             if (this.x <= (FlxG.width/2) && this.y <= (FlxG.height/2)){
                 this.color = blue;
             }
@@ -54,7 +54,7 @@ package;
             }
         }
 
-        public function invertDirection(){
+        private function invertDirection(){
             if (FlxG.keys.justPressed.SPACE){
                 this.velocity.x *= -1;
                 this.velocity.y *= -1;

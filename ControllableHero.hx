@@ -15,7 +15,7 @@ package;
             
         }
 
-        public function keyboardMovement(){
+        private function keyboardMovement(){
             if (FlxG.keys.pressed.RIGHT){
                 this.x += 1;
             }
@@ -30,7 +30,7 @@ package;
             }   
         }
 
-        public function enforceBoundaries(){
+        private function enforceBoundaries(){
             if (this.x >= FlxG.width - this.width){
                 this.x = FlxG.width - this.width;   
             }
